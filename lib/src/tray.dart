@@ -47,7 +47,7 @@ class SystemTray {
     bool value = await _platformChannel.invokeMethod(
       _kInitSystemTray,
       <String, dynamic>{
-        _kTrayIdKey: const Uuid().v1(),
+        _kTrayIdKey: const Uuid().v4(),
         _kTitleKey: title,
         _kIconPathKey: await Utils.getIcon(iconPath),
         _kToolTipKey: toolTip,
